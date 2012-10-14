@@ -39,6 +39,12 @@ public class OrdinaryFrame implements Frame
 
 
     @Override
+    public int scoreFrameAndAnySubsequentFrames()
+    {
+        return score() + nextFrame.scoreFrameAndAnySubsequentFrames();
+    }
+
+    @Override
     public boolean isOver()
     {
         return secondRoll != ROLL_UNMADE || isStrike();

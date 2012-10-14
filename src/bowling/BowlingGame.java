@@ -29,12 +29,6 @@ public class BowlingGame
 
     public int score()
     {
-        int score = 0;
-
-        for (int i = 0; i < NUM_FRAMES; i++)
-        {
-            score += frames[i].score();
-        }
-        return score;
+        return frames[0].scoreFrameAndAnySubsequentFrames();
     }
 }

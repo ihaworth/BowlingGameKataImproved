@@ -39,6 +39,12 @@ public class LastFrame implements Frame
 
 
     @Override
+    public int scoreFrameAndAnySubsequentFrames()
+    {
+        return score();
+    }
+
+    @Override
     public boolean isSpare()
     {
         return firstRoll + secondRoll == 10;
