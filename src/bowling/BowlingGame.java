@@ -3,10 +3,8 @@ package bowling;
 public class BowlingGame
 {
     private static final int NUM_FRAMES = 10;
-
-    private static final int PENULTIMATE_FRAME = NUM_FRAMES - 2;
-
     private static final int LAST_FRAME = NUM_FRAMES - 1;
+    private static final int PENULTIMATE_FRAME = NUM_FRAMES - 2;
 
     private Frame[] frames = new Frame[NUM_FRAMES];
     private int currentFrame = 0;
@@ -22,11 +20,6 @@ public class BowlingGame
     public void roll(int numPins)
     {
         currentFrame().roll(numPins);
-
-        if (currentFrame().isOver())
-        {
-            currentFrame++;
-        }
     }
 
     private Frame currentFrame()

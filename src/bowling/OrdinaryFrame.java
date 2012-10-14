@@ -19,8 +19,10 @@ public class OrdinaryFrame implements Frame
     {
         if (firstRoll == ROLL_UNMADE)
             firstRoll = numPins;
-        else
+        else if (!isStrike() && secondRoll == ROLL_UNMADE)
             secondRoll = numPins;
+        else
+            nextFrame.roll(numPins);
     }
 
     @Override
