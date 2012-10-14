@@ -37,7 +37,6 @@ public class OrdinaryFrame implements Frame
         return firstRoll + secondRoll;
     }
 
-
     @Override
     public int scoreFrameAndAnySubsequentFrames()
     {

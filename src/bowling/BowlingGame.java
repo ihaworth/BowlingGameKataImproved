@@ -3,32 +3,27 @@ package bowling;
 public class BowlingGame
 {
     private static final int NUM_FRAMES = 10;
-    private static final int LAST_FRAME = NUM_FRAMES - 1;
     private static final int PENULTIMATE_FRAME = NUM_FRAMES - 2;
 
-    private Frame[] frames = new Frame[NUM_FRAMES];
-    private int currentFrame = 0;
+    private Frame firstFrame;
 
     public BowlingGame()
     {
-        frames[LAST_FRAME] = new LastFrame();
+        Frame previousFrame = new LastFrame();
 
         for (int i = PENULTIMATE_FRAME; i >= 0 ; i--)
-            frames[i] = new OrdinaryFrame(frames[i + 1]);
+            previousFrame = new OrdinaryFrame(previousFrame);
+
+        firstFrame = previousFrame;
     }
 
     public void roll(int numPins)
     {
-        currentFrame().roll(numPins);
-    }
-
-    private Frame currentFrame()
-    {
-        return frames[currentFrame];
+        firstFrame.roll(numPins);
     }
 
     public int score()
     {
-        return frames[0].scoreFrameAndAnySubsequentFrames();
+        return firstFrame.scoreFrameAndAnySubsequentFrames();
     }
 }
