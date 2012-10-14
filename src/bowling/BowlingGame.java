@@ -9,12 +9,12 @@ public class BowlingGame
 
     public BowlingGame()
     {
-        Frame previousFrame = new LastFrame();
+        Frame frame = new LastFrame();
 
         for (int i = PENULTIMATE_FRAME; i >= 0 ; i--)
-            previousFrame = new OrdinaryFrame(previousFrame);
+            frame = new OrdinaryFrame(frame);
 
-        firstFrame = previousFrame;
+        firstFrame = frame;
     }
 
     public void roll(int numPins)

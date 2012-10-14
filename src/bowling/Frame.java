@@ -3,7 +3,6 @@ package bowling;
 public interface Frame
 {
     void roll(int numPins);
-    int score();
     int scoreFrameAndAnySubsequentFrames();
 
     boolean isOver();

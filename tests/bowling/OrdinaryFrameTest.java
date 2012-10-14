@@ -9,9 +9,9 @@ import org.junit.Test;
 
 public class OrdinaryFrameTest
 {
-    private Frame frame;
-    private Frame nextFrame;
-    private Frame nextButOneFrame;
+    private OrdinaryFrame frame;
+    private OrdinaryFrame nextFrame;
+    private OrdinaryFrame nextButOneFrame;
 
     @Before
     public void setUp()

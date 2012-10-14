@@ -9,7 +9,7 @@ import org.junit.Test;
 
 public class LastFrameTest
 {
-    private Frame lastFrame = new LastFrame();
+    private LastFrame lastFrame = new LastFrame();
 
     @Test
     public void lastFrameIsOverWithTwoRollsThatAreNotSpareOrStrike()

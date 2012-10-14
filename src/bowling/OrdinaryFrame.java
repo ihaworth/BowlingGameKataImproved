@@ -25,8 +25,7 @@ public class OrdinaryFrame implements Frame
             nextFrame.roll(numPins);
     }
 
-    @Override
-    public int score()
+    int score()
     {
         if (isSpare())
             return 10 + nextFrame.bonusForSpareInPreviousFrame();

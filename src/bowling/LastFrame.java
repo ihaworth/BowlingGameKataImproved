@@ -28,8 +28,7 @@ public class LastFrame implements Frame
         return firstRoll != ROLL_UNMADE && secondRoll != ROLL_UNMADE;
     }
 
-    @Override
-    public int score()
+    int score()
     {
         if (isSpare() || isStrike())
             return firstRoll + secondRoll + thridRoll;
