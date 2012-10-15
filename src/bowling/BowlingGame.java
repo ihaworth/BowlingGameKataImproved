@@ -3,7 +3,7 @@ package bowling;
 public class BowlingGame
 {
     private static final int NUM_FRAMES = 10;
-    private static final int PENULTIMATE_FRAME = NUM_FRAMES - 2;
+    private static final int NUM_ORDINARY_FRAMES = NUM_FRAMES - 1;
 
     private Frame firstFrame;
 
@@ -11,7 +11,7 @@ public class BowlingGame
     {
         Frame frame = new LastFrame();
 
-        for (int i = PENULTIMATE_FRAME; i >= 0 ; i--)
+        for (int i = 0 ; i < NUM_ORDINARY_FRAMES; i++)
             frame = new OrdinaryFrame(frame);
 
         firstFrame = frame;
